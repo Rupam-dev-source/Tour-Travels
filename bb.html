@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Flight Ticket Booking</h1>
+        <form action="#" method="POST">
+            <!-- Passenger Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Departure City -->
+            <label for="departure_city">Departure City:</label>
+            <input type="text" id="departure_city" name="departure_city" required>
+
+            <!-- Arrival City -->
+            <label for="arrival_city">Arrival City:</label>
+            <input type="text" id="arrival_city" name="arrival_city" required>
+
+            <!-- Flight Date -->
+            <label for="flight_date">Flight Date:</label>
+            <input type="date" id="flight_date" name="flight_date" required>
+
+            <!-- Class -->
+            <label for="flight_class">Class:</label>
+            <select id="flight_class" name="flight_class" required>
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first_class">First Class</option>
+            </select>
+
+            <!-- Number of Passengers -->
+            <label for="passengers">Number of Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Book Ticket</button>
+        </form>
+    </div>
+
+</body>
+</html>

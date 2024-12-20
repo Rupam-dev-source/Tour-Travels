@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .jumbotron {
+            background-image: url('https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .jumbotron h1 {
+            font-size: 48px;
+            font-weight: 600;
+        }
+
+        .jumbotron p {
+            font-size: 24px;
+        }
+
+        .destination img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .container1 {
+            background-color: antiquewhite;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #d0480d;
+            color: #f1f1f1;
+            border-radius: 0;
+            transition: .2s;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            border: 1px solid #333;
+            background-color: #fff;
+            color: #000;
+        }
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    font-size: 14px;
+}
+
+.footer-right .footer-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right .footer-links li {
+    display: inline-block;
+}
+
+.footer-right .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-right .footer-links a:hover {
+    color: #f1a900;
+}
+
+    </style>
+</head>
+
+<body id="MyTour" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="60">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="javascript:void(0)">Rupam's tour & travels</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#a">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aa.html">Trains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bb.html">Flights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cc.html">Hotel Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#b">Holiday Packages</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center" id="a">
+        <h1>Welcome to Rupam's tour & travels</h1>
+        <p>Traveling is an incredible way to explore new cultures, see breathtaking landscapes, and create lasting
+            memories. Whether you're planning a trip abroad or exploring your own country, there are so many experiences
+            to enjoy.</p>
+    </div>
+
+    <div class="container1" id="b">
+        <h2 class="text-center">Holiday Packages</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="destination">
+                    <img src="https://wallpapers.com/images/featured/paris-zy4x2ow5p7j5qi4a.jpg" alt="Paris">
+                    <h3>Paris, France</h3>
+                    <p>Discover the beauty of the Eiffel Tower, museums, and world-class cuisine.</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Buy Tickets</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="destination">
+                    <img src="https://images.pexels.com/photos/248195/pexels-photo-248195.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Tokyo">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Experience the culture and vibrant city life in Japan's capital.</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Buy Tickets</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="destination">
+                    <img src="https://images.pexels.com/photos/89485/pexels-photo-89485.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="New York">
+                    <h3>New York, USA</h3>
+                    <p>The city that never sleeps—explore iconic landmarks like Times Square and Central Park.</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Buy Tickets</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="destination">
+                    <img src="https://images.pexels.com/photos/46273/pexels-photo-46273.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Poland">
+                    <h3>Poland</h3>
+                    <p>The city that never sleeps—explore iconic landmarks like Times Square and Central Park.</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Buy Tickets</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="destination">
+                    <img src="https://images.pexels.com/photos/773471/pexels-photo-773471.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Switzerland">
+                    <h3>Switzerland</h3>
+                    <p>This country is more beautiful beyond the imagination.</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Buy Tickets</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="destination">
+                    <img src="https://images.pexels.com/photos/532864/pexels-photo-532864.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Germany">
+                    <h3>Germany</h3>
+                    <p>Wonderful place to travel</p>
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal">×</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets</label>
+                            <input type="number" class="form-control" id="psw" placeholder="How many?">
+                        </div>
+                        <div class="form-group">
+                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+                            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                        </div>
+                        <button type="submit" class="btn btn-block">Pay
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-bs-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                    <p>Need <a href="#">help?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; Rupam's Tour & Travels. All Rights Reserved.</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    // Enable the Modal with Bootstrap's JavaScript
+    const modal = new bootstrap.Modal(document.getElementById('myModal'), {
+        keyboard: false
+    });
+
+    // Function to handle the modal form submission (optional, for simulation of form interaction)
+    const submitModalForm = () => {
+        const ticketAmount = document.getElementById('psw').value;
+        const userEmail = document.getElementById('usrname').value;
+
+        if (ticketAmount && userEmail) {
+            alert(`Your ticket(s) for ${ticketAmount} have been successfully booked. A confirmation email will be sent to ${userEmail}`);
+        } else {
+            alert('Please fill in all fields.');
+        }
+    };
+
+    // Add event listener for the submit button in the modal form
+    document.querySelector('.btn.btn-block').addEventListener('click', (event) => {
+        event.preventDefault();  // Prevent form submission and handle it via JavaScript
+        submitModalForm();
+    });
+
+    // Smooth scroll functionality (optional)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+</script>
