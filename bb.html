@@ -5,29 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Ticket Booking</title>
     <style>
+        /* Body styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-image: url('flight.jpg'); /* Specify your image path */
+            background-size: cover; /* Cover the entire screen */
+            background-position: center center; /* Center the image */
+            background-attachment: fixed; /* Ensure the background stays fixed during scroll */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Set the height to the full viewport height */
             padding: 20px;
         }
+        
+        /* Container styling */
         .container {
             max-width: 600px;
             margin: auto;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Slight opacity for the background */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+            box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
         }
+
+        /* Heading styling */
         h1 {
             text-align: center;
             color: #333;
         }
+
+        /* Label styling */
         label {
             font-size: 16px;
             margin-bottom: 8px;
             display: block;
             color: #555;
         }
+
+        /* Input and Select styling */
         input, select {
             width: 100%;
             padding: 10px;
@@ -35,7 +51,10 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
+            box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
         }
+
+        /* Button styling */
         button {
             width: 100%;
             padding: 10px;
@@ -46,6 +65,8 @@
             font-size: 18px;
             cursor: pointer;
         }
+
+        /* Button hover effect */
         button:hover {
             background-color: #0056b3;
         }
