@@ -7,15 +7,22 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('train.jpg'); /* Specify your image path */
+            background-size: cover; /* Cover the entire screen */
+            background-position: center center; /* Center the image */
+            background-attachment: fixed; /* Ensure the background stays fixed during scroll */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Set the height to the full viewport height */
             padding: 20px;
         }
         .container {
             max-width: 600px;
             margin: auto;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px; /* Rounded corners */
         }
         h1 {
             text-align: center;
@@ -32,6 +39,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
+            box-sizing: border-box; /* Ensure inputs stay inside the container */
         }
         button {
             width: 100%;
