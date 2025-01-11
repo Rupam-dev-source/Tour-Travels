@@ -76,7 +76,7 @@
 
     <div class="container">
         <h1>Flight Ticket Booking</h1>
-        <form action="#" method="POST">
+        <form id="flight-booking-form" action="#" method="POST">
             <!-- Passenger Name -->
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -109,6 +109,41 @@
             <button type="submit">Book Ticket</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('flight-booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const departureCity = document.getElementById('departure_city').value;
+            const arrivalCity = document.getElementById('arrival_city').value;
+            const flightDate = document.getElementById('flight_date').value;
+            const flightClass = document.getElementById('flight_class').value;
+            const passengers = document.getElementById('passengers').value;
+
+            // Basic validation (optional, since HTML form already requires fields)
+            if (!name || !departureCity || !arrivalCity || !flightDate || !flightClass || !passengers) {
+                alert("Please fill out all the required fields.");
+                return;
+            }
+
+            // Display a confirmation message
+            const confirmationMessage = `
+                Flight Booking Confirmed!\n\n
+                Name: ${name}\n
+                Departure City: ${departureCity}\n
+                Arrival City: ${arrivalCity}\n
+                Flight Date: ${flightDate}\n
+                Class: ${flightClass}\n
+                Passengers: ${passengers}
+            `;
+            alert(confirmationMessage);
+
+            // Optionally, clear the form after submission
+            document.getElementById('flight-booking-form').reset();
+        });
+    </script>
 
 </body>
 </html>
