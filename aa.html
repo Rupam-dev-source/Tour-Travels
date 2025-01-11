@@ -60,7 +60,7 @@
 
     <div class="container">
         <h1>Train Ticket Booking</h1>
-        <form action="#" method="POST">
+        <form id="ticket-form" action="#" method="POST">
             <!-- Passenger Name -->
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -93,6 +93,41 @@
             <button type="submit">Book Ticket</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('ticket-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const departure = document.getElementById('departure').value;
+            const arrival = document.getElementById('arrival').value;
+            const travelDate = document.getElementById('travel_date').value;
+            const trainClass = document.getElementById('train_class').value;
+            const passengers = document.getElementById('passengers').value;
+            
+            // Basic validation (optional, since HTML form already requires fields)
+            if (!name || !departure || !arrival || !travelDate || !trainClass || !passengers) {
+                alert("Please fill out all the fields.");
+                return;
+            }
+
+            // Display a confirmation message
+            const confirmationMessage = `
+                Ticket booked successfully!\n
+                Name: ${name}\n
+                Departure: ${departure}\n
+                Arrival: ${arrival}\n
+                Travel Date: ${travelDate}\n
+                Train Class: ${trainClass}\n
+                Passengers: ${passengers}
+            `;
+            alert(confirmationMessage);
+
+            // Optionally, clear the form after submission
+            document.getElementById('ticket-form').reset();
+        });
+    </script>
 
 </body>
 </html>
