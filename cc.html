@@ -62,7 +62,7 @@
 
     <div class="container">
         <h1>Hotel Booking</h1>
-        <form action="#" method="POST">
+        <form id="hotel-booking-form" action="#" method="POST">
             <!-- Full Name -->
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
@@ -103,6 +103,45 @@
             <button type="submit">Book Now</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('hotel-booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const roomType = document.getElementById('room_type').value;
+            const guests = document.getElementById('guests').value;
+            const specialRequests = document.getElementById('special_requests').value;
+
+            // Basic validation (optional, since HTML form already requires fields)
+            if (!name || !email || !phone || !checkin || !checkout || !roomType || !guests) {
+                alert("Please fill out all the required fields.");
+                return;
+            }
+
+            // Display a confirmation message
+            const confirmationMessage = `
+                Hotel Booking Confirmed!\n\n
+                Name: ${name}\n
+                Email: ${email}\n
+                Phone: ${phone}\n
+                Check-in: ${checkin}\n
+                Check-out: ${checkout}\n
+                Room Type: ${roomType}\n
+                Guests: ${guests}\n
+                Special Requests: ${specialRequests || 'None'}
+            `;
+            alert(confirmationMessage);
+
+            // Optionally, clear the form after submission
+            document.getElementById('hotel-booking-form').reset();
+        });
+    </script>
 
 </body>
 </html>
