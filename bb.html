@@ -70,6 +70,30 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        /* Basic style for the Back button */
+.back-button {
+    display: inline-block;           /* Make the link behave like a button */
+    padding: 10px 20px;              /* Add padding for button size */
+    font-size: 16px;                 /* Font size for text */
+    color: #fff;                     /* Text color (white) */
+    background-color: #3498db;       /* Button background color (blue) */
+    text-align: center;              /* Center align text */
+    text-decoration: none;           /* Remove underline */
+    border: none;                    /* Remove default border */
+    border-radius: 5px;              /* Rounded corners */
+    cursor: pointer;                 /* Pointer cursor on hover */
+    transition: all 0.3s ease;       /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.back-button:hover {
+    background-color: #2980b9;       /* Darker blue when hovered */
+    transform: translateY(-2px);     /* Slightly lift button */
+}
+
+
+
     </style>
 </head>
 <body>
@@ -107,6 +131,11 @@
 
             <!-- Submit Button -->
             <button type="submit">Book Ticket</button>
+
+            <div class="spacer" style="height: 40px;"></div>
+            <a href="index.html" class="back-button">Back</a>
+
+
         </form>
     </div>
 
