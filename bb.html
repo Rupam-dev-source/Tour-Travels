@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,35 @@
         /* Body styling */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('flight.jpg'); /* Specify your image path */
-            background-size: cover; /* Cover the entire screen */
-            background-position: center center; /* Center the image */
-            background-attachment: fixed; /* Ensure the background stays fixed during scroll */
-            background-repeat: no-repeat; /* Prevent image repetition */
-            margin: 0; /* Remove default margin */
-            height: 100vh; /* Set the height to the full viewport height */
+            background-image: url('flight.jpg');
+            /* Specify your image path */
+            background-size: cover;
+            /* Cover the entire screen */
+            background-position: center center;
+            /* Center the image */
+            background-attachment: fixed;
+            /* Ensure the background stays fixed during scroll */
+            background-repeat: no-repeat;
+            /* Prevent image repetition */
+            margin: 0;
+            /* Remove default margin */
+            height: 100vh;
+            /* Set the height to the full viewport height */
             padding: 20px;
         }
-        
+
         /* Container styling */
         .container {
             max-width: 600px;
             margin: auto;
-            background-color: rgba(255, 255, 255, 0.8); /* Slight opacity for the background */
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Slight opacity for the background */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
-            box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* Slight shadow for depth */
+            box-sizing: border-box;
+            /* Ensures padding and border are included in the element's total width */
         }
 
         /* Heading styling */
@@ -44,14 +55,16 @@
         }
 
         /* Input and Select styling */
-        input, select {
+        input,
+        select {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
-            box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+            box-sizing: border-box;
+            /* Ensures padding and border are included in the element's total width */
         }
 
         /* Button styling */
@@ -72,30 +85,41 @@
         }
 
         /* Basic style for the Back button */
-.back-button {
-    display: inline-block;           /* Make the link behave like a button */
-    padding: 10px 20px;              /* Add padding for button size */
-    font-size: 16px;                 /* Font size for text */
-    color: #fff;                     /* Text color (white) */
-    background-color: #3498db;       /* Button background color (blue) */
-    text-align: center;              /* Center align text */
-    text-decoration: none;           /* Remove underline */
-    border: none;                    /* Remove default border */
-    border-radius: 5px;              /* Rounded corners */
-    cursor: pointer;                 /* Pointer cursor on hover */
-    transition: all 0.3s ease;       /* Smooth transition for hover effect */
-}
+        .back-button {
+            display: inline-block;
+            /* Make the link behave like a button */
+            padding: 10px 20px;
+            /* Add padding for button size */
+            font-size: 16px;
+            /* Font size for text */
+            color: #fff;
+            /* Text color (white) */
+            background-color: #3498db;
+            /* Button background color (blue) */
+            text-align: center;
+            /* Center align text */
+            text-decoration: none;
+            /* Remove underline */
+            border: none;
+            /* Remove default border */
+            border-radius: 5px;
+            /* Rounded corners */
+            cursor: pointer;
+            /* Pointer cursor on hover */
+            transition: all 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
 
-/* Hover effect */
-.back-button:hover {
-    background-color: #2980b9;       /* Darker blue when hovered */
-    transform: translateY(-2px);     /* Slightly lift button */
-}
-
-
-
+        /* Hover effect */
+        .back-button:hover {
+            background-color: #2980b9;
+            /* Darker blue when hovered */
+            transform: translateY(-2px);
+            /* Slightly lift button */
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -140,9 +164,9 @@
     </div>
 
     <script>
-        document.getElementById('flight-booking-form').addEventListener('submit', function(event) {
+        document.getElementById('flight-booking-form').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the form from submitting immediately
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const departureCity = document.getElementById('departure_city').value;
@@ -175,4 +199,5 @@
     </script>
 
 </body>
+
 </html>
